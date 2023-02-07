@@ -3,9 +3,8 @@ import { memo, useState } from "react";
 
 import Modal from "./components/modal";
 import './util'
-import * as test from './test'
-console.log('test...', test)
-test.c()
+
+
 const App = memo(() => {
   const [visible, setVisible] = useState(false);
   const [visible2, setVisible2] = useState(false);
