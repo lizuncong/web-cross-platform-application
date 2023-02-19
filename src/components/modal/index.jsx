@@ -32,6 +32,7 @@ const WindowPortal = ({
   useEffect(() => {
     if (!visible) {
       windowInstance.current && windowInstance.current.close();
+      windowInstance.current = null;
       return;
     }
     // 默认选项
@@ -81,6 +82,7 @@ const WindowPortal = ({
       // 默认失焦关闭
       if (closeAfterBlur && windowInstance.current) {
         windowInstance.current.close();
+        windowInstance.current = null;
         onClose && onClose();
       }
       if (onBlur) {
@@ -101,9 +103,11 @@ const WindowPortal = ({
   useEffect(() => {
     window.addEventListener('beforeunload', () => {
       windowInstance.current && windowInstance.current.close();
+      windowInstance.current = null;
     });
     return () => {
       windowInstance.current && windowInstance.current.close();
+      windowInstance.current = null;
     };
   }, []);
   if (!visible) return null;

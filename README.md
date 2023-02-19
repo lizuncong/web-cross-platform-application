@@ -1,1 +1,1 @@
-
+- 如果需要了解 window open 和 new BrowserWindow 两种方式创建窗口内存开销，可以执行 `yarn run start`，并访问 `http://localhost:3000/memory-usage` 即可。对应的 electron 代码在[electron-app](https://github.com/lizuncong/electron-app)仓库中
