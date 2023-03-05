@@ -1,7 +1,4 @@
-import {
-  lazy,
-  Suspense,
-} from "react";
+import { lazy, Suspense } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 const LazyBoundary = (WrapComp) => (
@@ -16,6 +13,9 @@ const Images = lazy(() =>
   import(/* webpackChunkName: "Images" */ "../pages/memory-usage/images")
 );
 
+const WindowOpen = lazy(() =>
+  import(/* webpackChunkName: "WindowOpen" */ "../pages/window-open")
+);
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "memory-usage",
         element: LazyBoundary(MemoryUsage),
+      },
+      {
+        path: "window-open",
+        element: LazyBoundary(WindowOpen),
       },
       {
         path: "images",
