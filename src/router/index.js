@@ -16,6 +16,9 @@ const Images = lazy(() =>
 const WindowOpen = lazy(() =>
   import(/* webpackChunkName: "WindowOpen" */ "../pages/window-open")
 );
+const ChildRoute = lazy(() =>
+  import(/* webpackChunkName: "ChildRoute" */ "../pages/child-route")
+);
 const router = createBrowserRouter([
   {
     path: "/",
@@ -32,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "images",
         element: LazyBoundary(Images),
+      },
+      {
+        path: "child-route",
+        element: LazyBoundary(ChildRoute),
       },
     ],
   },
