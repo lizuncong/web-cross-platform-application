@@ -42,11 +42,11 @@ const WindowPortal = ({
       backgroundColor: '#00000000',
       width: 400,
       height: 400,
-      // frame: false,
+      frame: false,
       // x: 0,
       // y: 0,
       // movable: true,
-      // resizable: false,
+      resizable: false,
     };
 
     const browserwinOptions = {
@@ -80,8 +80,8 @@ const WindowPortal = ({
 
     if (!windowInstance.current) return;
 
-    const onBlurInner = () => {
-      console.log('子窗口诗教', )
+    const onBlurInner = (e) => {
+
       // 默认失焦关闭
       if (closeAfterBlur && windowInstance.current) {
         windowInstance.current.close();
@@ -94,10 +94,13 @@ const WindowPortal = ({
     };
     const onBeforeunload = () => {
       console.log('子窗口before unlaod....-==')
-      // onClose();
+      onClose();
     };
     windowInstance.current.addEventListener('blur', onBlurInner);
-    windowInstance.current.addEventListener('beforeunload', onBeforeunload);
+    windowInstance.current.addEventListener('load', () => {
+      windowInstance.current.addEventListener('beforeunload', onBeforeunload);
+    });
+
     return () => {
       if (!windowInstance.current) return;
       windowInstance.current.removeEventListener('blur', onBlurInner);

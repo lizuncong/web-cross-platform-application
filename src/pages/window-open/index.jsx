@@ -49,7 +49,7 @@ const Index = memo(() => {
         closeAfterBlur={false}
         route="/child-route"
         name={"modal"}
-        winOptions={{ width: 400, height: 400, x: 0, y: 200 }}
+        winOptions={{ fullscreen: true, width: 400, height: 400, x: 0, y: 200 }}
         onClose={() => {
           setVisible2(false);
         }}
