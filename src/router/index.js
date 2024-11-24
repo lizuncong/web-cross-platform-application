@@ -6,39 +6,20 @@ const LazyBoundary = (WrapComp) => (
     <WrapComp />
   </Suspense>
 );
-const MemoryUsage = lazy(() =>
-  import(/* webpackChunkName: "MemoryUsage" */ "../pages/memory-usage")
-);
-const Images = lazy(() =>
-  import(/* webpackChunkName: "Images" */ "../pages/memory-usage/images")
-);
+
 
 const WindowOpen = lazy(() =>
   import(/* webpackChunkName: "WindowOpen" */ "../pages/window-open")
 );
-const ChildRoute = lazy(() =>
-  import(/* webpackChunkName: "ChildRoute" */ "../pages/child-route")
-);
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     children: [
       {
-        path: "memory-usage",
-        element: LazyBoundary(MemoryUsage),
-      },
-      {
-        path: "window-open",
+        path: "/",
         element: LazyBoundary(WindowOpen),
-      },
-      {
-        path: "images",
-        element: LazyBoundary(Images),
-      },
-      {
-        path: "child-route",
-        element: LazyBoundary(ChildRoute),
       },
     ],
   },
