@@ -16,6 +16,10 @@
 ## 效果
 在web端的效果如下，当在web端点击打开子窗口时，是以Modal的方式打开：
 
+
+<img src="./docs/web.gif">
+
+
 <img src="./docs/web.png" style="height: 300px">
 
 
