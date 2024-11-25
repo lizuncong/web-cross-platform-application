@@ -25,6 +25,9 @@
 
 而在Electron客户端点击打开子窗口时，是以独立窗口的方式打开：
 
+<img src="./docs/electron.gif">
+
+
 <img src="./docs/electron_01.png" style="height: 300px">
 
 
