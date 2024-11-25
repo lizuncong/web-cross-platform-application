@@ -13,7 +13,7 @@
 ## 效果
 在web端的效果如下，当在web端点击打开子窗口时，是以Modal的方式打开：
 
-![image](./docs/web.png)
+<img src="./docs/web.png" style="height: 200px">
 
 
 而在Electron客户端点击打开子窗口时，是以独立窗口的方式打开：
