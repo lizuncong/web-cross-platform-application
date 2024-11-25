@@ -1,1 +1,9 @@
-- 如果需要了解 window open 和 new BrowserWindow 两种方式创建窗口内存开销，可以执行 `yarn run start`，并访问 `http://localhost:3000/memory-usage` 即可。对应的 electron 代码在[electron-app](https://github.com/lizuncong/electron-app)仓库中
+## 环境
+- node：16
+
+## 运行
+- yarn install
+- yarn run start
+## 使用
+- public/base.html。用简单的html验证浏览器原生支持window.open的特性
+- public/改进.html。基于base.html的改进版，解决了关闭再打开子窗口时，点击事件失效的问题
