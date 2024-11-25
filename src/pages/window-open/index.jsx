@@ -11,7 +11,7 @@ const Index = memo(() => {
   return (
     <>
       <div className={styles.container}>
-        <div onClick={() => setCount(count + 1)}>父窗口计数器：{count}</div>
+        <div onClick={() => setCount(count + 1)}>父窗口计数器：<span className={styles.count}>{count}</span></div>
         <button
           onClick={() => {
             setVisible(!visible);

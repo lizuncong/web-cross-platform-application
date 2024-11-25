@@ -2,7 +2,8 @@
     user-select: none;
 }
 
-.child {
-    background-color: red;
+.count {
+    color: red;
+    font-size: 32px;
     user-select: none;
 }
