@@ -1,5 +1,5 @@
 ## 环境
-- node：16
+- node：16 or >16
 
 ## 运行
 - npm install

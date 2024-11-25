@@ -6,7 +6,7 @@ const CustomModal = ({ visible, children, onClose, winOptions }: any) => {
       title={null}
       width={winOptions.width + 48}
       open={visible}
-      closable={false}
+      closable={true}
       maskClosable={false}
       footer={null}
       onCancel={onClose}
