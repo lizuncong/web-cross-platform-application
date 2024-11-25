@@ -1,0 +1,8 @@
+.container {
+    user-select: none;
+}
+
+.child {
+    background-color: red;
+    user-select: none;
+}

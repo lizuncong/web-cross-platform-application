@@ -1,7 +1,7 @@
 import React, { memo, useState, lazy } from "react";
 import comp from '../../bridge/components';
 import Child from "./child";
-
+import styles from './index.module.css';
 const Modal = lazy(() => comp('Modal'));
 
 const Index = memo(() => {
@@ -10,7 +10,7 @@ const Index = memo(() => {
 
   return (
     <>
-      <div>
+      <div className={styles.container}>
         <div onClick={() => setCount(count + 1)}>父窗口计数器：{count}</div>
         <button
           onClick={() => {
