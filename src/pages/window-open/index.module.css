@@ -8,11 +8,17 @@
 
 
 .count {
+    display: inline-block;
+    width: 60px;
+    text-align: center;
     color: red;
     font-size: 32px;
     user-select: none;
 }
 
+.icon {
+    font-size: 26px;
+}
 .img {
     margin-top: 20px;
     width: 400px;

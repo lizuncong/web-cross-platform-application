@@ -1,8 +1,9 @@
 import React, { memo, useState, lazy } from "react";
-import comp from '../../bridge/components';
+import { MinusCircleOutlined, PlusCircleOutlined } from "@ant-design/icons";
+import comp from "../../bridge/components";
 import Child from "./child";
-import styles from './index.module.css';
-const Modal = lazy(() => comp('Modal'));
+import styles from "./index.module.css";
+const Modal = lazy(() => comp("Modal"));
 
 const Index = memo(() => {
   const [visible, setVisible] = useState(false);
@@ -11,7 +12,12 @@ const Index = memo(() => {
   return (
     <>
       <div className={styles.container}>
-        <div onClick={() => setCount(count + 1)}>父窗口计数器：<span className={styles.count}>{count}</span></div>
+        <div>
+          计数器：
+          <MinusCircleOutlined className={styles.icon} onClick={() => setCount(count - 1)} />
+          <span className={styles.count}>{count}</span>
+          <PlusCircleOutlined className={styles.icon} onClick={() => setCount(count + 1)} />
+        </div>
         <button
           onClick={() => {
             setVisible(!visible);
