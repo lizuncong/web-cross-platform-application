@@ -24,7 +24,7 @@ const Index = memo(() => {
         visible={visible}
         closeAfterBlur={false}
         name={"modal"}
-        winOptions={{ width: 400, height: 400, x: 0, y: 200 }}
+        winOptions={{ width: 400, height: 400, x: 200, y: 200 }}
         onClose={() => {
           setVisible(false);
         }}

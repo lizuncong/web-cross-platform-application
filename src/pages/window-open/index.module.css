@@ -2,8 +2,23 @@
     user-select: none;
 }
 
+.child {
+    padding-top: 20px;
+}
+
+
 .count {
     color: red;
     font-size: 32px;
     user-select: none;
+}
+
+.img {
+    margin-top: 20px;
+    width: 400px;
+    height: auto;
+}
+
+.btn {
+    margin-top: 20px;
 }
